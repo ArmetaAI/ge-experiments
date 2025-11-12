@@ -35,7 +35,11 @@ class Settings(BaseSettings):
     GCS_PROJECT_ID: str = ""  # Optional: Defaults to auto-detection if empty
     
     LMNR_PROJECT_API_KEY: str  # Laminar API Key
-    
+
+    # MLflow Configuration
+    MLFLOW_TRACKING_URI: str = "http://localhost:5000"
+    MLFLOW_EXPERIMENT_NAME_PREFIX: str = "vector_experiments"
+
     class Config:
         """Pydantic configuration."""
         env_file = ".env"
